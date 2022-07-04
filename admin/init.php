@@ -13,4 +13,4 @@
     $noNavbar = ['index.php'];
     $url = explode('/', $_SERVER['PHP_SELF']);
     $file = end($url);
-    if(!in_array($file, $noNavbar)){include $temp . 'navbar.php';}
+    if((!in_array($file, $noNavbar)) && !($_GET['page'] === 'edit')){include $temp . 'navbar.php';}

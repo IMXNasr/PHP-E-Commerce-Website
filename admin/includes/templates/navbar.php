@@ -2,7 +2,7 @@
     session_start();
     $stmt = $db -> prepare("SELECT username FROM users WHERE id = ?");
     $stmt -> execute([$_SESSION['id']]);
-    $row = $stmt -> fetch();
+    $rowUser = $stmt -> fetch();
 ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
@@ -21,7 +21,7 @@
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <?=$row['username'];?>
+                <?=$rowUser['username'];?>
               </a>
               <ul class="dropdown-menu my-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="members.php?page=edit"><?=lang('Edit profile')?></a></li>
