@@ -1,0 +1,27 @@
+/* START MAIN RULES */
+body {
+  background-color: #F4F4F4;
+  font-size: 16px;
+}
+/* END MAIN RULES */
+/* START LOGIN FORM */
+.login {
+  width: 300px;
+  margin: 100px auto;
+}
+.login h4 {
+  color: #777;
+}
+.login input {
+  margin-bottom: 10px;
+}
+.login .form-control {
+  background-color: #EAEAEA;
+}
+/* END LOGIN FORM */
+/* START BOOTSTRAP EDITS */
+.dropdown-menu.my-menu {
+  left: auto;
+  right: 0;
+}
+/* END BOOTSTRAP EDITS */
