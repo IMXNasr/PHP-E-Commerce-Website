@@ -11,7 +11,7 @@
       $password = $_POST['password'];
       $hashedPassword = sha1($password);
       // get the id of the user if exists
-      $stmt = $db -> prepare("SELECT id, username FROM users WHERE username = ? AND password = ? AND group_id = 1 LIMIT 1");
+      $stmt = $db -> prepare("SELECT id, username FROM users WHERE username = ? AND password = ? AND admin = 1 LIMIT 1");
       $stmt->execute([$username, $hashedPassword]);
       $row = $stmt -> fetch();
       $count = $stmt -> rowCount();
