@@ -3,6 +3,7 @@
     session_start();
     if($_SESSION['id']){
       include "init.php";
+      echo "Welcome to Dashboard !!";
     }else{
       header('Location: index.php');
       exit();

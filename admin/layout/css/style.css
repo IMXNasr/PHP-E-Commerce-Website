@@ -24,4 +24,11 @@ body {
   left: auto;
   right: 0;
 }
+.delete-form {
+  width: 200px !important;
+  margin: 40px auto !important;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
 /* END BOOTSTRAP EDITS */
