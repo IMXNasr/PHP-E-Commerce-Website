@@ -32,8 +32,8 @@
             <td><?=$row['name']?></td>
             <td><?=$row['email']?></td>
             <td>
-              <a href="?page=edit&id=<?=$row['id']?>" class="btn btn-warning">Edit</a>
-              <a href="?page=delete&id=<?=$row['id']?>" class="btn btn-danger">Delete</a>
+              <a href="?page=edit&id=<?=$row['id']?>" class="btn btn-warning"><i class="fa fa-pen fa-sm"></i> Edit</a>
+              <a href="?page=delete&id=<?=$row['id']?>" class="btn btn-danger"><i class="fa fa-trash fa-sm"></i> Delete</a>
             </td>
           </tr>
           <?php } ?>

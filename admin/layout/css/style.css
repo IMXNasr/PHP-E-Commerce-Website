@@ -24,6 +24,11 @@ body {
   left: auto;
   right: 0;
 }
+.main-table td,
+.main-table th {
+  vertical-align: middle;
+  text-align: center;
+}
 .delete-form {
   width: 200px !important;
   margin: 40px auto !important;
