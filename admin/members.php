@@ -23,6 +23,7 @@
             <th>Username</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Date</th>
             <th>Control</th>
           </tr>
           <?php foreach($rows as $row){ ?>
@@ -31,6 +32,7 @@
             <td><?=$row['username']?></td>
             <td><?=$row['name']?></td>
             <td><?=$row['email']?></td>
+            <td><?=$row['date']?></td>
             <td>
               <a href="?page=edit&id=<?=$row['id']?>" class="btn btn-warning"><i class="fa fa-pen fa-sm"></i> Edit</a>
               <a href="?page=delete&id=<?=$row['id']?>" class="btn btn-danger"><i class="fa fa-trash fa-sm"></i> Delete</a>
@@ -173,7 +175,7 @@
       $alert = '';
       // Insert new user if there is no user with the same username and email
       if($stmtGetUsername -> rowCount() <= 0 && $stmtGetEmail -> rowCount() <= 0){
-        $stmt = $db -> prepare("INSERT INTO users (username, name, email, password) VALUES (?, ?, ?, ?)");
+        $stmt = $db -> prepare("INSERT INTO users (username, name, email, password, date) VALUES (?, ?, ?, ?, now())");
         $stmt -> execute([$username, $name, $email, $password]);
         if($stmt -> rowCount() > 0){
           $alert = 'success';
