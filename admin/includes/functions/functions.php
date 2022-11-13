@@ -13,3 +13,9 @@
     //     header()
     //   }
     // }
+    function countItems($item, $table){
+      global $db;
+      $stmt = $db -> prepare("SELECT COUNT($item) FROM $table");
+      $stmt -> execute();
+      return $stmt -> fetchColumn(); 
+    }

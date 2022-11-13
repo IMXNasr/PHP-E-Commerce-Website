@@ -37,3 +37,35 @@ body {
   align-self: center;
 }
 /* END BOOTSTRAP EDITS */
+/* START DASHBOARD EDITS */
+.home-stats h1 {
+  margin: 50px;
+  font-size: 4rem;
+}
+.home-stats .stat {
+  background-color: #EEE;
+  border: 1px solid #CCC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.home-stats .stat span {
+  font-size: 60px;
+}
+.latest {
+  margin-top: 30px;
+}
+.latest .panel-heading {
+  background-color: #EEE;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+.latest .panel-body {
+  background-color: #FFF;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+/* END DASHBOARD EDITS */
